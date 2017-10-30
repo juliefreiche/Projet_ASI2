@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+	var masocket = io.connect();
+	masocket.on('connection', function (socket) {
+		console.log(socket);
+		//var new_socket = JSON.parse(socket);
+
+		/*socket.on('data_comm', function(obj){
+			io.emit('data_comm', socket.id);
+		});*/
+		masocket.emit('data_comm',socket);
+
+	 
+	});
+
+	function CMD_NEXT() {
+
+
+		var slid={
+				"CMD" : "NEXT"
+			}
+		masocket.emit('slidEvent',slid);
+
+
+	}
+</script>
+</head>
+<body>
+
+<button onclick="CMD_NEXT()">NEXT</button>
+<h1></h1>
+
+<p></p>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+	"port": 1337,
+	"contentDirectory" : "/home/ubuntu/new/tp_starter/uploads",
+	"presentationDirectory" : "/home/ubuntu/new/tp_starter/presentation_content"
+}
